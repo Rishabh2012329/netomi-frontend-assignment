@@ -1,0 +1,25 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding: 0;
+}
+
+
+.iframe-container{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    height: 100vh;
+}
+
+iframe{
+    border: solid 2px red; 
+    padding-left: 50px;
+    padding-right: 30px;
+}
+
+.errorMessage{
+    font-size: large;
+    margin-top: 20px;
+}

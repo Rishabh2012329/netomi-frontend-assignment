@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/form.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="oninit()">
+    <form id="personalInfo" class="form">
+        <p class="formHeading">
+            Can you please provide your personal details?
+        </p>
+
+        <label>
+            Name
+        </label>
+        <input name="name">
+
+        <label>
+            Date of birth
+        </label>
+        <input name="dob" type="date">
+
+        <label>
+            Contact Number
+        </label>
+        <input name="contactNumber">
+
+        <label>
+            Country
+        </label>
+        <select name="country">
+            <option></option>
+        </select>
+
+        <label>
+            State
+        </label>
+        <select name="state" disabled>
+            <option></option>
+        </select>
+
+        <label>
+            Your Email
+        </label>
+        <input name="email">
+        
+        <button type="submit" class="formSubmit">
+            Submit
+        </button>
+    </form>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script src="/form.js">
+    </script>
+</body>
+
+
+</html>

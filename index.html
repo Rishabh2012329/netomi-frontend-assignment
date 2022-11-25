@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/index.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="iframe-container">
+
+        <iframe id="personalInfo" src="/form.html" width="370px" height="570px">
+        </iframe>
+        
+        <p id="error" class="errorMessage"></p>
+
+    </div>
+    
+    <script>
+
+        function displayErrorMessage(msg){
+            document.getElementById('error').innerText="Result: " + msg
+        }
+
+        const validatorConfig = {
+            name:{
+                presence: {
+                    allowEmpty:false,
+                },
+                length: {
+                    minimum: 4,
+                    maximum: 10
+                }
+            },
+            email:{
+                email:{
+                    allowEmpty:true
+                }
+            },
+            contactNumber:{
+                numericality: true,
+                length:{is:10}
+            },
+            state:{
+                presence: {
+                    allowEmpty:false,
+                },
+            },
+            country:{
+                presence: {
+                    allowEmpty:false,
+                }
+            }
+        }
+
+        function setUpFrame(){
+            let frameWindow = window.frames['personalInfo'].contentWindow
+            frameWindow.configureValidator(validatorConfig)
+        }
+
+    </script>
+
+</body>
+</html>
